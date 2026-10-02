@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Intel (x2): Current File",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "${workspaceFolder}/.vscode/slurm/slurm_submit.cs",
+
+                // pythonScript
+                "${file}",
+
+                // environment
+                "${workspaceFolder}",
+                // outputDirectory
+                "${workspaceFolder}/links/outputs",
+
+                // partition
+                "intel",
+                // count
+                "2"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "L40 (x1): Current File",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run", "${workspaceFolder}/.vscode/slurm/slurm_submit.cs", 
+                "${file}", 
+                "${workspaceFolder}", "${workspaceFolder}/links/outputs",
+                "L40", "1"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "DEBUG Intel (x1): Current File",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run", "${workspaceFolder}/.vscode/slurm/slurm_submit_debug.cs",
+                "${file}",
+                "${workspaceFolder}", "${workspaceFolder}/.vscode/launch.json", "${workspaceFolder}/.vscode/slurm/temp",
+                "intel", "1"
+            ],
+            "problemMatcher": []
+        },
+    ]
+}
