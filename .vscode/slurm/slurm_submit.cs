@@ -13,7 +13,7 @@ var projectName = "sample_project";
 var sbatchScript = 
     $"""
     #!/usr/bin/bash
-    cd "{environment}"
+    cd "{environment.FullName}"
     uv run "{pythonScript.FullName}"
     """;
 var cpusPerGpu = 7;

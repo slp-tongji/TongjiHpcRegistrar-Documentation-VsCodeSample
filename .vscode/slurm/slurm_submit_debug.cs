@@ -21,7 +21,7 @@ var port = Random.Shared.Next(10000, 65536);
 var sshScript =
     $"""
     #!/usr/bin/bash
-    cd "{environment}"
+    cd "{environment.FullName}"
 
     # 由于是使用 SSH 访问目标节点，不会保留原本的环境变量。
     # 例如，如果使用 Conda，需要在这里激活环境。
