@@ -1,0 +1,1 @@
+https://github.com/slp-tongji/TongjiHpcRegistrar-Documentation/blob/main/guides/vs-code.md
